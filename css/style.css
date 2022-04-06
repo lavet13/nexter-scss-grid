@@ -103,6 +103,18 @@ body {
   font-size: 1.7rem;
 }
 
+.home {
+  background-color: #f9f7f6;
+}
+.home__img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+.home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
+  fill: #c69963;
+  height: 2rem;
+  width: 2rem;
+}
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
@@ -134,8 +146,11 @@ body {
 }
 
 .homes {
-  background-color: #101d2c;
   grid-column: center-start/center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
 }
 
 .realtors {
