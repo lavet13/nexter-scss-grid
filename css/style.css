@@ -86,6 +86,29 @@ body {
   background-color: #B28451;
 }
 
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  margin-top: 4rem;
+  cursor: pointer;
+}
+.nav-btn::before, .nav-btn::after {
+  content: "";
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  display: block;
+}
+.nav-btn::before {
+  transform: translateY(-1.5rem);
+}
+.nav-btn::after {
+  transform: translateY(1.5rem);
+}
+
 .feature {
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -311,6 +334,8 @@ body {
   background-color: #c69963;
   grid-column: sidebar-start/sidebar-end;
   grid-row: 1/-1;
+  display: flex;
+  justify-content: center;
 }
 
 .story__pictures {

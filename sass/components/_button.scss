@@ -14,3 +14,33 @@
         background-color: $color-primary-dark;
     }
 }
+
+.nav-btn {
+    border: none;
+    border-radius: 0;
+
+    background-color: $color-white;
+    height: 2px;
+    width: 4.5rem;
+    margin-top: 4rem;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: "";
+
+        background-color: $color-white;
+        height: 2px;
+        width: 4.5rem;
+
+        display: block;  
+    }
+
+    &::before {
+        transform: translateY(-1.5rem);
+    }
+
+    &::after {
+        transform: translateY(1.5rem);
+    }
+}
