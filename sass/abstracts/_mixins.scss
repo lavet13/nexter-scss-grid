@@ -34,14 +34,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
     }
 
     @if $breakpoint == bp-medium {
-
+        @media only screen and (max-width: 50em) { // 800px
+            @content;
+        }
     }
 
     @if $breakpoint == bp-small {
-
-    }
-
-    @if $breakpoint == bp-smallest {
-        
+        @media only screen and (max-width: 37.5em) { // 600px
+            @content;
+        }
     }
 }

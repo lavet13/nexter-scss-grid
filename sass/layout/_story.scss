@@ -4,8 +4,14 @@
         background-color: $color-primary;   
 
         grid-column: full-start / col-end 4;
+        @include respond(bp-medium) {
+            grid-column: 1 / -1;
+            padding: 3rem;
+        }
+
         background-image: linear-gradient(rgba($color-primary, .2), rgba($color-primary, .2)),
                           url(../img/back.jpg);
+        background-size: cover;
         background-blend-mode: soft-light;
 
         display: grid;
@@ -16,30 +22,41 @@
     }
 
     &__img--1 {
-        max-inline-size: 100%;
-        block-size: auto;
+        width: 100%;
 
-        grid-area: 2 / 2 / span 4 / span 4;
+        grid-row: 2 / 6;
+        grid-column: 2 / 6;
 
         box-shadow: $shadow-sm;
+
+        @include respond(bp-medium) {
+            grid-column: 1 / 5;
+            grid-row: 1 / -1;
+        }
     }
 
     &__img--2 {
-        max-inline-size: 100%;
-        block-size: auto;
+        width: 115%;
 
-        grid-area: 4 / 4 / 6 / 7;
-
-        transform-origin: left;
-        transform: scale(1.2);
+        grid-row: 4 / 6;
+        grid-column: 4 / 7;
 
         box-shadow: $shadow-sm;
+
+        @include respond(bp-medium) {
+            grid-row: 1 / -1;
+            width: 100%;
+        }
     }
 
     &__content {
         background-color: $color-grey-light-1;
 
         grid-column: col-start 5 / full-end;
+        @include respond(bp-medium) {
+            grid-column: 1 / -1;
+            grid-row: 5 / 6;
+        }
 
         padding: 6rem 8vw;
         
