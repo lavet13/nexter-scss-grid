@@ -22,7 +22,6 @@
     background-color: $color-white;
     height: 2px;
     width: 4.5rem;
-    margin-top: 4rem;
     cursor: pointer;
 
     &::before,
@@ -41,6 +40,16 @@
     }
 
     &::after {
-        transform: translateY(1.5rem);
+        transform: translateY(1.3rem);
+    }
+
+    @include respond(bp-large) {
+        &::before {
+            transform: translateY(-1.2rem);
+        }
+    
+        &::after {
+            transform: translateY(1rem);
+        }
     }
 }
