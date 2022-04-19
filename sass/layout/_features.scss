@@ -3,6 +3,10 @@
 
     margin: 15rem 0;
 
+    @include respond(bp-medium) {
+        margin: 12rem 0 5rem;
+    }
+
     display: grid;
     // grid-template-columns: repeat(3, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
